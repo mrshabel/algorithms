@@ -61,20 +61,9 @@ class LinkedList:
         Remove the first occurrence of a node with the specified value in the linked list
         """
         # initialize pointer
-        current: ListNode | None = self._head
         dummy: ListNode = ListNode()
-
-        if not current:
-            return
-        
-        # handle special case where value is either at head or tail
-        if val == self._head.val:
-            self.removeHead()
-            return
-        
-        if val == self._tail.val:
-            self.removeTail()
-            return
+        dummy.next = self._head
+        current = dummy
         
         while current.next:
             if val == current.next.val:
@@ -104,6 +93,12 @@ class LinkedList:
         current = self._head
 
         if not current:
+            return
+        
+        # case where there is only one node
+        if not current.next:
+            self._head = None
+            self._tail = None
             return
         
         dummy = ListNode()
