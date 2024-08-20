@@ -1,4 +1,4 @@
-from . import LinkedList
+from linked_list import LinkedList
 
 def reverse(data: LinkedList) -> None:
     """
@@ -31,16 +31,17 @@ def reverse(data: LinkedList) -> None:
         # update current pointer
         current = next
 
-list = LinkedList()
-list.appendToTail(1)
-list.appendToTail(2)
-list.appendToTail(3)
-list.appendToTail(4)
-list.appendToTail(5)
-list.appendToTail(6)
+if __name__ == "__main__":
+    list = LinkedList()
+    list.appendToTail(1)
+    list.appendToTail(2)
+    list.appendToTail(3)
+    list.appendToTail(4)
+    list.appendToTail(5)
+    list.appendToTail(6)
 
-# reverse the list
-reverse(list)
+    # reverse the list
+    reverse(list)
 
-# traverse the list
-list.traverse()
+    # traverse the list
+    list.traverse()

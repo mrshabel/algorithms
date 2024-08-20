@@ -1,4 +1,4 @@
-from . import LinkedList, ListNode
+from linked_list import LinkedList, ListNode
 
 def find_middle_node(linked_list: LinkedList) -> ListNode:
     """
@@ -16,7 +16,7 @@ def find_middle_node(linked_list: LinkedList) -> ListNode:
     return current
 
 
-if __name__ == "main":
+if __name__ == "__main__":
 
     list = LinkedList()
     list.appendToTail(1)

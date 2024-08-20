@@ -1,4 +1,4 @@
-from . import LinkedList, ListNode
+from linked_list import LinkedList, ListNode
 
 def find_kth_to_last(data: LinkedList, k: int) -> ListNode:
     """
@@ -26,14 +26,15 @@ def find_kth_to_last(data: LinkedList, k: int) -> ListNode:
     return p1
 
 
-list = LinkedList()
-list.appendToTail(1)
-list.appendToTail(2)
-list.appendToTail(3)
-list.appendToTail(4)
-list.appendToTail(5)
-list.appendToTail(6)
+if __name__ == "__main__":
+    list = LinkedList()
+    list.appendToTail(1)
+    list.appendToTail(2)
+    list.appendToTail(3)
+    list.appendToTail(4)
+    list.appendToTail(5)
+    list.appendToTail(6)
 
-node = find_kth_to_last(list, 1)
+    node = find_kth_to_last(list, 1)
 
-print(node.val)
+    print(node.val)

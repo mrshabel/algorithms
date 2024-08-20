@@ -1,4 +1,4 @@
-from . import LinkedList, ListNode
+from linked_list import LinkedList, ListNode
 
 def remove_duplicate(data: LinkedList) -> None:
     """
@@ -23,20 +23,21 @@ def remove_duplicate(data: LinkedList) -> None:
         current = current.next
         
 
-list = LinkedList()
-list.appendToTail(1)
-list.appendToTail(1)
-list.appendToTail(1)
-list.appendToTail(2)
-list.appendToTail(3)
-list.appendToTail(3)
-list.appendToTail(4)
-list.appendToTail(5)
-list.appendToTail(6)
-list.appendToTail(6)
-list.appendToTail(6)
-list.appendToTail(6)
+if __name__ == "__main__":
+    list = LinkedList()
+    list.appendToTail(1)
+    list.appendToTail(1)
+    list.appendToTail(1)
+    list.appendToTail(2)
+    list.appendToTail(3)
+    list.appendToTail(3)
+    list.appendToTail(4)
+    list.appendToTail(5)
+    list.appendToTail(6)
+    list.appendToTail(6)
+    list.appendToTail(6)
+    list.appendToTail(6)
 
-remove_duplicate(list)
+    remove_duplicate(list)
 
-list.traverse()
+    list.traverse()

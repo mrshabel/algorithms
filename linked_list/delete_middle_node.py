@@ -1,4 +1,5 @@
-from . import LinkedList, ListNode, find_middle_node
+from linked_list import LinkedList, ListNode
+from linked_list.find_middle_node import find_middle_node
 
 def delete_middle_node(node: ListNode) -> None:
     """
@@ -13,10 +14,8 @@ def delete_middle_node(node: ListNode) -> None:
     node.val = next.val
     node.next = next.next
 
-    return node
 
-
-if __name__ == "main":
+if __name__ == "__main__":
     list = LinkedList()
     list.appendToTail(1)
     list.appendToTail(2)
