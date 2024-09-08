@@ -8,7 +8,7 @@ def find_middle_node(linked_list: LinkedList) -> ListNode:
     current = linked_list._head
     runner = linked_list._head
 
-    while runner and runner.next:
+    while runner.next and runner.next.next:
         current = current.next
         runner = runner.next.next
     
