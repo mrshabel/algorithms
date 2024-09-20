@@ -6,7 +6,7 @@ def paths_in_adjacency_list(start: str, target: str, graph: AdjacencyList) -> in
 
     def dfs(node: str, target: str, graph: AdjacencyList, visited: set[str]) -> int:
         # base case
-        if node in visited:
+        if node in visited:    
             return 0
         
         if node == target:
