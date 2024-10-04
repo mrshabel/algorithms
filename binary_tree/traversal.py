@@ -24,13 +24,13 @@ def in_order(root: TreeNode):
         return
     
     # process left subtree
-    pre_order(root.left)
+    in_order(root.left)
 
     # process root
     print(root.val)
 
     # process right subtree
-    pre_order(root.right)
+    in_order(root.right)
 
 
 def post_order(root: TreeNode):
@@ -41,10 +41,10 @@ def post_order(root: TreeNode):
         return
     
     # process left subtree
-    pre_order(root.left)
+    post_order(root.left)
 
     # process right subtree
-    pre_order(root.right)
+    post_order(root.right)
 
     # process root
     print(root.val)
